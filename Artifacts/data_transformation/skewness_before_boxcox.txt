@@ -1,0 +1,12 @@
+Skewness of continuous features:
+Age                        0.447880
+DailyRate                 -0.017923
+DistanceFromHome           0.957450
+HourlyRate                -0.032112
+MonthlyIncome              1.538867
+MonthlyRate                0.028973
+TotalWorkingYears          1.031314
+YearsAtCompany             1.242283
+YearsInCurrentRole         0.728441
+YearsSinceLastPromotion    1.755342
+YearsWithCurrManager       0.692533

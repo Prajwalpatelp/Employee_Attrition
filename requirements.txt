@@ -1,0 +1,24 @@
+# Core ML and data manipulation libraries
+pandas
+numpy
+scikit-learn
+seaborn
+matplotlib
+imbalanced-learn
+catboost
+xgboost
+
+# Web framework and related tools
+fastapi
+uvicorn
+flask
+
+# Experiment tracking and version control
+mlflow
+dvc
+
+# File upload and related utilities
+python-multipart
+
+# Jupyter kernel
+ipykernel

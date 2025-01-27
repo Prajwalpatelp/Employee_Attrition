@@ -1,0 +1,20 @@
+Age,BusinessTravel,DailyRate,Department,DistanceFromHome,Education,EducationField,EnvironmentSatisfaction,Gender,HourlyRate,JobInvolvement,JobLevel,JobRole,JobSatisfaction,MaritalStatus,MonthlyIncome,MonthlyRate,NumCompaniesWorked,OverTime,PercentSalaryHike,PerformanceRating,RelationshipSatisfaction,StockOptionLevel,TotalWorkingYears,TrainingTimesLastYear,WorkLifeBalance,YearsAtCompany,YearsInCurrentRole,YearsSinceLastPromotion,YearsWithCurrManager,EmployeeSource
+35,Travel_Rarely,750,Research & Development,5,4,Life Sciences,4,Female,40,4,3,Research Scientist,4,Married,8000,15000,1,No,15,4,4,2,10,3,3,7,5,2,5,Internal Referral
+30,Travel_Frequently,450,Sales,25,3,Marketing,3,Male,20,3,2,Sales Executive,3,Single,4000,12000,4,Yes,10,3,3,0,5,1,2,3,2,1,1,Recruitment Agency
+29,Non-Travel,500,Human Resources,12,2,Human Resources,2,Female,25,3,1,Human Resources,2,Divorced,3000,14000,3,No,12,3,2,1,7,2,3,2,1,0,1,Employee Referral
+45,Travel_Rarely,600,Research & Development,10,5,Life Sciences,4,Male,50,4,4,Manager,4,Married,15000,18000,2,No,20,4,4,3,20,4,4,15,7,5,8,Internal Referral
+28,Travel_Frequently,800,Sales,18,3,Marketing,3,Female,30,3,2,Sales Representative,3,Single,5000,16000,4,Yes,8,3,3,1,6,1,2,3,3,1,2,Recruitment Agency
+37,Travel_Rarely,650,Research & Development,8,4,Life Sciences,4,Male,35,4,3,Laboratory Technician,3,Married,7000,15000,3,No,14,4,4,2,12,3,3,10,6,3,4,Internal Referral
+32,Non-Travel,550,Human Resources,6,2,Human Resources,3,Female,28,3,1,Human Resources,2,Divorced,4000,14000,3,No,10,3,2,0,8,2,3,4,3,1,3,Employee Referral
+40,Travel_Rarely,720,Research & Development,15,4,Medical,4,Female,45,4,3,Research Scientist,4,Married,9000,16000,2,No,18,4,4,2,15,3,3,12,8,4,6,Internal Referral
+31,Travel_Frequently,580,Sales,20,3,Marketing,3,Male,33,3,2,Sales Executive,3,Single,4500,13000,4,Yes,12,3,3,1,7,1,2,4,2,2,3,Recruitment Agency
+42,Travel_Rarely,690,Research & Development,7,5,Life Sciences,4,Female,50,4,4,Manager,4,Married,12000,17000,3,No,16,4,4,3,18,3,3,15,7,5,8,Internal Referral
+36,Non-Travel,500,Human Resources,14,3,Human Resources,3,Female,29,3,2,Human Resources,3,Divorced,5000,14000,2,No,11,3,3,1,10,2,3,5,3,2,2,Employee Referral
+27,Travel_Frequently,450,Sales,22,2,Marketing,2,Male,22,2,1,Sales Representative,2,Single,3000,12000,5,Yes,9,3,2,0,4,1,2,2,1,0,1,Recruitment Agency
+50,Travel_Rarely,880,Research & Development,5,5,Medical,4,Male,55,4,4,Manager,4,Married,16000,20000,1,No,25,4,4,3,25,4,4,20,10,6,10,Internal Referral
+33,Travel_Frequently,620,Sales,19,3,Marketing,3,Female,30,3,2,Sales Executive,3,Married,6000,14000,3,Yes,14,3,3,2,9,1,2,6,4,3,4,Recruitment Agency
+39,Travel_Rarely,750,Research & Development,12,4,Life Sciences,4,Male,42,4,3,Laboratory Technician,3,Married,8500,16000,2,No,17,4,4,2,13,3,3,10,6,4,6,Internal Referral
+26,Non-Travel,520,Human Resources,10,2,Human Resources,2,Female,26,2,1,Human Resources,2,Single,3500,14000,4,No,8,3,2,1,5,1,2,3,2,1,2,Employee Referral
+29,Travel_Frequently,400,Sales,24,2,Marketing,2,Male,23,2,1,Sales Representative,2,Single,2800,11000,5,Yes,7,3,2,0,4,1,2,2,1,0,1,Recruitment Agency
+48,Travel_Rarely,900,Research & Development,6,5,Medical,4,Female,52,4,4,Manager,4,Married,14000,19000,1,No,22,4,4,3,23,4,4,18,9,5,9,Internal Referral
+34,Travel_Rarely,640,Research & Development,9,4,Life Sciences,3,Male,36,3,2,Research Scientist,3,Married,6500,15000,2,No,13,3,3,1,11,2,3,8,5,3,4,Internal Referral

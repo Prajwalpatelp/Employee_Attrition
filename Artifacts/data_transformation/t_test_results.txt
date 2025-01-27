@@ -1,0 +1,27 @@
+P-value for 'Age' between 'Current employee' and 'Voluntary Resignation': 0.0000
+P-value for 'DailyRate' between 'Current employee' and 'Voluntary Resignation': 0.0000
+P-value for 'DistanceFromHome' between 'Current employee' and 'Voluntary Resignation': 0.0000
+P-value for 'Education' between 'Current employee' and 'Voluntary Resignation': 0.0000
+P-value for 'EmployeeCount' between 'Current employee' and 'Voluntary Resignation': nan
+P-value for 'EmployeeNumber' between 'Current employee' and 'Voluntary Resignation': 0.5162
+P-value for 'Application ID' between 'Current employee' and 'Voluntary Resignation': 0.5208
+P-value for 'EnvironmentSatisfaction' between 'Current employee' and 'Voluntary Resignation': 0.0000
+P-value for 'HourlyRate' between 'Current employee' and 'Voluntary Resignation': 0.0701
+P-value for 'JobInvolvement' between 'Current employee' and 'Voluntary Resignation': 0.0000
+P-value for 'JobLevel' between 'Current employee' and 'Voluntary Resignation': 0.0000
+P-value for 'JobSatisfaction' between 'Current employee' and 'Voluntary Resignation': 0.0000
+P-value for 'MonthlyIncome' between 'Current employee' and 'Voluntary Resignation': 0.0000
+P-value for 'MonthlyRate' between 'Current employee' and 'Voluntary Resignation': 0.2647
+P-value for 'NumCompaniesWorked' between 'Current employee' and 'Voluntary Resignation': 0.0000
+P-value for 'PercentSalaryHike' between 'Current employee' and 'Voluntary Resignation': 0.0001
+P-value for 'PerformanceRating' between 'Current employee' and 'Voluntary Resignation': 0.2630
+P-value for 'RelationshipSatisfaction' between 'Current employee' and 'Voluntary Resignation': 0.3412
+P-value for 'StandardHours' between 'Current employee' and 'Voluntary Resignation': nan
+P-value for 'StockOptionLevel' between 'Current employee' and 'Voluntary Resignation': 0.0000
+P-value for 'TotalWorkingYears' between 'Current employee' and 'Voluntary Resignation': 0.0000
+P-value for 'TrainingTimesLastYear' between 'Current employee' and 'Voluntary Resignation': 0.0000
+P-value for 'WorkLifeBalance' between 'Current employee' and 'Voluntary Resignation': 0.0001
+P-value for 'YearsAtCompany' between 'Current employee' and 'Voluntary Resignation': 0.0000
+P-value for 'YearsInCurrentRole' between 'Current employee' and 'Voluntary Resignation': 0.0000
+P-value for 'YearsSinceLastPromotion' between 'Current employee' and 'Voluntary Resignation': 0.0024
+P-value for 'YearsWithCurrManager' between 'Current employee' and 'Voluntary Resignation': 0.0000
