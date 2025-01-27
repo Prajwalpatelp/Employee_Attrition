@@ -29,6 +29,7 @@ os.environ["MLFLOW_TRACKING_PASSWORD"] = "bc25eaff1e11fab265c4d466c61af1acd9be33
 def save_metrics_to_file(metrics, name, path):
     """Save metrics to a text file."""
     metrics_file = os.path.join(path, f"{name}_metrics.txt")
+    os.makedirs(path, exist_ok=True)  # Ensure the directory exists
     with open(metrics_file, "w") as file:
         for key, value in metrics.items():
             file.write(f"{key}: {value}\n")
@@ -123,7 +124,7 @@ def ModelTrainer(data_path, models_path, params, threshold=0.5):
         y_resampled = np.loadtxt(os.path.join(data_path, "y_resampled.csv"), delimiter=",")
         X_test_scaled = np.loadtxt(os.path.join(data_path, "X_test_scaled.csv"), delimiter=",")
         y_test = np.loadtxt(os.path.join(data_path, "y_test.csv"), delimiter=",")
-
+        
         # Ensure y_test is 1D if it isn't already
         if y_test.ndim > 1:
             y_test = np.argmax(y_test, axis=1)
@@ -153,7 +154,10 @@ def ModelTrainer(data_path, models_path, params, threshold=0.5):
                     metrics_train, y_pred_train = evaluate_with_threshold(y_resampled, y_probs_train, threshold)
                     metrics_test, y_pred_test = evaluate_with_threshold(y_test, y_probs_test, threshold)
 
+                    # Save metrics to file
                     save_metrics_to_file(metrics_test, name, models_path)
+                    
+                    # Log metrics to MLflow
                     mlflow.log_metrics({
                         "train_accuracy": metrics_train["accuracy"],
                         "test_accuracy": metrics_test["accuracy"],
