@@ -16,3 +16,207 @@ stages:
       hash: md5
       md5: ceac29c3862f61555affc59f5694417b
       size: 5300731
+  data_validation:
+    cmd: set PYTHONPATH=src && python -m employee.components.Data_validation
+    deps:
+    - path: Artifacts/raw_data.csv
+      hash: md5
+      md5: ceac29c3862f61555affc59f5694417b
+      size: 5300731
+    - path: src/employee/components/Data_validation.py
+      hash: md5
+      md5: ce37478a8b57c013a277417e7d254e92
+      size: 5376
+    outs:
+    - path: Artifacts/Data_validation/data_summary.txt
+      hash: md5
+      md5: 3bf0d0bd5b3b3ad5a28ea9b5d44be47a
+      size: 3994
+    - path: Artifacts/Data_validation/duplicate_check.txt
+      hash: md5
+      md5: 75b35e2803db0397c3a73440a9d19620
+      size: 47
+    - path: Artifacts/Data_validation/missing_summary.csv
+      hash: md5
+      md5: d64a1e77c481ab60aab659aa22313024
+      size: 893
+    - path: Artifacts/Data_validation/unique_values.txt
+      hash: md5
+      md5: 8bf62962e74e0b4247c39f25a3828373
+      size: 16765
+  data_transformation:
+    cmd: set PYTHONPATH=src && python -m employee.components.Data_transformation
+    deps:
+    - path: Artifacts/raw_data.csv
+      hash: md5
+      md5: ceac29c3862f61555affc59f5694417b
+      size: 5300731
+    - path: src/employee/components/Data_transformation.py
+      hash: md5
+      md5: 64005ab483f98349efa1fd4b1efe6291
+      size: 9406
+    outs:
+    - path: Artifacts/data_transformation/Preprocessor.pkl
+      hash: md5
+      md5: 3e9c3f1a339ac03959ef4df7c728968a
+      size: 4762
+    - path: Artifacts/data_transformation/X_test_scaled.csv
+      hash: md5
+      md5: 002c45689d18c1809d6c09261a9957a5
+      size: 8765974
+    - path: Artifacts/data_transformation/X_train_scaled.csv
+      hash: md5
+      md5: 40e59351add4503eb044b2251f37c585
+      size: 29131378
+    - path: Artifacts/data_transformation/cleaning_report.txt
+      hash: md5
+      md5: d77cebd92d10ee3eefde2997e6d0626b
+      size: 67
+    - path: Artifacts/data_transformation/df_final.csv
+      hash: md5
+      md5: 5d994a664d2d54b9641b2feb463359c3
+      size: 8318091
+    - path: Artifacts/data_transformation/outlier_info.txt
+      hash: md5
+      md5: 5c3c168b317462aed1711efd34f88ba9
+      size: 326811
+    - path: Artifacts/data_transformation/skewness_before_boxcox.txt
+      hash: md5
+      md5: 27625ff1cbd51b5643d34deb2a491510
+      size: 439
+    - path: Artifacts/data_transformation/t_test_results.txt
+      hash: md5
+      md5: 9acb3763b932a3e0b07544c9ca45a28e
+      size: 2530
+    - path: Artifacts/data_transformation/y_resampled.csv
+      hash: md5
+      md5: bf5f260135dcd27e754fa852afe54775
+      size: 567684
+    - path: Artifacts/data_transformation/y_test.csv
+      hash: md5
+      md5: d2548ed8387e19d58cc79f23e8b1ac30
+      size: 170820
+  training_pipeline:
+    cmd: set PYTHONPATH=src && python -m employee.pipeline.Training_pipeline
+    deps:
+    - path: Notebook_Experiments/Data/employee_data.csv
+      hash: md5
+      md5: 6c9b6aaa9f1bd99bc64a152b85033c3b
+      size: 4358899
+    - path: src/employee/components/Data_ingestion.py
+      hash: md5
+      md5: 2c723c89f9c114804f0e4ba80ea9bd39
+      size: 2104
+    - path: src/employee/components/Data_transformation.py
+      hash: md5
+      md5: 64005ab483f98349efa1fd4b1efe6291
+      size: 9406
+    - path: src/employee/components/Data_validation.py
+      hash: md5
+      md5: ce37478a8b57c013a277417e7d254e92
+      size: 5376
+    - path: src/employee/components/Model_evaluation.py
+      hash: md5
+      md5: 0868f614c5db724dfe2a931bb587abb7
+      size: 5401
+    - path: src/employee/components/Model_trainer.py
+      hash: md5
+      md5: dd787aa65808aef66517a065b9432e18
+      size: 8929
+    outs:
+    - path: Artifacts/Data_validation/data_summary.txt
+      hash: md5
+      md5: 3bf0d0bd5b3b3ad5a28ea9b5d44be47a
+      size: 3994
+    - path: Artifacts/Data_validation/duplicate_check.txt
+      hash: md5
+      md5: 75b35e2803db0397c3a73440a9d19620
+      size: 47
+    - path: Artifacts/Data_validation/missing_summary.csv
+      hash: md5
+      md5: d64a1e77c481ab60aab659aa22313024
+      size: 893
+    - path: Artifacts/Data_validation/unique_values.txt
+      hash: md5
+      md5: 8bf62962e74e0b4247c39f25a3828373
+      size: 16765
+    - path: Artifacts/data_transformation/Preprocessor.pkl
+      hash: md5
+      md5: 3e9c3f1a339ac03959ef4df7c728968a
+      size: 4762
+    - path: Artifacts/data_transformation/X_test_scaled.csv
+      hash: md5
+      md5: 002c45689d18c1809d6c09261a9957a5
+      size: 8765974
+    - path: Artifacts/data_transformation/X_train_scaled.csv
+      hash: md5
+      md5: 40e59351add4503eb044b2251f37c585
+      size: 29131378
+    - path: Artifacts/data_transformation/cleaning_report.txt
+      hash: md5
+      md5: d77cebd92d10ee3eefde2997e6d0626b
+      size: 67
+    - path: Artifacts/data_transformation/df_final.csv
+      hash: md5
+      md5: 5d994a664d2d54b9641b2feb463359c3
+      size: 8318091
+    - path: Artifacts/data_transformation/outlier_info.txt
+      hash: md5
+      md5: 5c3c168b317462aed1711efd34f88ba9
+      size: 326811
+    - path: Artifacts/data_transformation/skewness_before_boxcox.txt
+      hash: md5
+      md5: 27625ff1cbd51b5643d34deb2a491510
+      size: 439
+    - path: Artifacts/data_transformation/t_test_results.txt
+      hash: md5
+      md5: 9acb3763b932a3e0b07544c9ca45a28e
+      size: 2530
+    - path: Artifacts/data_transformation/y_resampled.csv
+      hash: md5
+      md5: bf5f260135dcd27e754fa852afe54775
+      size: 567684
+    - path: Artifacts/data_transformation/y_test.csv
+      hash: md5
+      md5: d2548ed8387e19d58cc79f23e8b1ac30
+      size: 170820
+    - path: Artifacts/evaluation/classification_report.txt
+      hash: md5
+      md5: 01ed9ff2ae9c747bdcda690b70757519
+      size: 334
+    - path: Artifacts/evaluation/confusion_matrix.npy
+      hash: md5
+      md5: 1e90aba1a4f7165b04c58aba2412cd7b
+      size: 144
+    - path: Artifacts/evaluation/evaluation_metrics.txt
+      hash: md5
+      md5: 70ad07b94762c8f2833c41b9ca5a26d6
+      size: 493
+    - path: Artifacts/models/Best_Model.pkl
+      hash: md5
+      md5: 25b56b1e37cc3e5d357c334b9bbc1773
+      size: 61278681
+    - path: Artifacts/raw_data.csv
+      hash: md5
+      md5: ceac29c3862f61555affc59f5694417b
+      size: 5300731
+  prediction_pipeline:
+    cmd: set PYTHONPATH=src && python -m employee.pipeline.Prediction_pipeline
+    deps:
+    - path: Artifacts/data_transformation/Preprocessor.pkl
+      hash: md5
+      md5: 3e9c3f1a339ac03959ef4df7c728968a
+      size: 4762
+    - path: Artifacts/models/Best_Model.pkl
+      hash: md5
+      md5: 25b56b1e37cc3e5d357c334b9bbc1773
+      size: 61278681
+    - path: src/employee/pipeline/Prediction_pipeline.py
+      hash: md5
+      md5: 651682ab1fd6c1d5c4064ff647550e67
+      size: 5727
+    outs:
+    - path: Artifacts/predictions/prediction_results.json
+      hash: md5
+      md5: caab266df645c18c80ea1f872ade5f19
+      size: 1094

@@ -1,0 +1,10 @@
+/cleaning_report.txt
+/t_test_results.txt
+/outlier_info.txt
+/skewness_before_boxcox.txt
+/df_final.csv
+/X_train_scaled.csv
+/y_resampled.csv
+/X_test_scaled.csv
+/y_test.csv
+/Preprocessor.pkl
