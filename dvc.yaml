@@ -1,0 +1,76 @@
+stages:
+  data_ingestion:
+    cmd: set PYTHONPATH=src && python -m employee.components.Data_ingestion
+    deps:
+      - Notebook_Experiments/Data/employee_data.csv
+      - src/employee/components/Data_ingestion.py
+    outs:
+      - Artifacts/raw_data.csv
+
+  data_validation:
+    cmd: set PYTHONPATH=src && python -m employee.components.Data_validation
+    deps:
+      - Artifacts/raw_data.csv
+      - src/employee/components/Data_validation.py
+    outs:
+      - Artifacts/Data_validation/data_summary.txt
+      - Artifacts/Data_validation/missing_summary.csv
+      - Artifacts/Data_validation/unique_values.txt
+      - Artifacts/Data_validation/duplicate_check.txt
+
+  data_transformation:
+    cmd: set PYTHONPATH=src && python -m employee.components.Data_transformation
+    deps:
+      - Artifacts/raw_data.csv
+      - src/employee/components/Data_transformation.py
+    outs:
+      - Artifacts/data_transformation/cleaning_report.txt
+      - Artifacts/data_transformation/t_test_results.txt
+      - Artifacts/data_transformation/outlier_info.txt
+      - Artifacts/data_transformation/skewness_before_boxcox.txt
+      - Artifacts/data_transformation/df_final.csv
+      - Artifacts/data_transformation/X_train_scaled.csv
+      - Artifacts/data_transformation/y_resampled.csv
+      - Artifacts/data_transformation/X_test_scaled.csv
+      - Artifacts/data_transformation/y_test.csv
+      - Artifacts/data_transformation/Preprocessor.pkl
+
+  model_training:
+    cmd: set PYTHONPATH=src && python -m employee.components.Model_trainer
+    deps:
+      - Artifacts/data_transformation/X_train_scaled.csv
+      - Artifacts/data_transformation/y_resampled.csv
+      - Artifacts/data_transformation/X_test_scaled.csv
+      - Artifacts/data_transformation/y_test.csv
+      - src/employee/components/Model_trainer.py
+    outs:
+      - Artifacts/models/Best_Model.pkl
+      - Artifacts/models/Random_Forest_Tuned_Model.pkl
+      - Artifacts/models/Random_Forest_Tuned_metrics.txt
+      - Artifacts/models/Logistic_Regression_metrics.txt
+      - Artifacts/models/Decision_Tree_metrics.txt
+      - Artifacts/models/K-Nearest_Neighbors_metrics.txt
+      - Artifacts/models/Naive_Bayes_metrics.txt
+      - Artifacts/models/Gradient_Boosting_metrics.txt
+      - Artifacts/models/AdaBoost_metrics.txt
+
+  model_evaluation:
+    cmd: set PYTHONPATH=src && python -m employee.components.Model_evaluation
+    deps:
+      - Artifacts/models/Best_Model.pkl
+      - src/employee/components/Model_evaluation.py
+      - Artifacts/data_transformation/X_test_scaled.csv
+      - Artifacts/data_transformation/y_test.csv
+    outs:
+      - Artifacts/evaluation/classification_report.txt
+      - Artifacts/evaluation/confusion_matrix.npy
+      - Artifacts/evaluation/evaluation_metrics.txt
+
+  prediction_pipeline:
+    cmd: set PYTHONPATH=src && python -m employee.pipeline.Prediction_pipeline
+    deps:
+      - src/employee/pipeline/Prediction_pipeline.py
+      - Artifacts/models/Best_Model.pkl
+      - Artifacts/data_transformation/Preprocessor.pkl
+    outs:
+      - Artifacts/predictions/prediction_results.json

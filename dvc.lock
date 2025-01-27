@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: set PYTHONPATH=src && python -m employee.components.Data_ingestion
+    deps:
+    - path: Notebook_Experiments/Data/employee_data.csv
+      hash: md5
+      md5: 6c9b6aaa9f1bd99bc64a152b85033c3b
+      size: 4358899
+    - path: src/employee/components/Data_ingestion.py
+      hash: md5
+      md5: 2c723c89f9c114804f0e4ba80ea9bd39
+      size: 2104
+    outs:
+    - path: Artifacts/raw_data.csv
+      hash: md5
+      md5: ceac29c3862f61555affc59f5694417b
+      size: 5300731

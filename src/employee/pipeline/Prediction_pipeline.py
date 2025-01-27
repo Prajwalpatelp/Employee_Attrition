@@ -1,7 +1,7 @@
 import os
 import sys
 import joblib
-import numpy as np
+import json
 import pandas as pd
 from src.employee.logger import logging
 from src.employee.exception import customexception
@@ -73,6 +73,20 @@ class PredictionPipeline:
             prediction_label = label_mapping.get(prediction_numeric, "Unknown")
 
             logging.info(f"Prediction label result: {prediction_label}")
+
+            # Save the prediction result to a JSON file
+            result_path = os.path.join("Artifacts", "predictions", "prediction_results.json")
+            os.makedirs(os.path.dirname(result_path), exist_ok=True)
+
+            prediction_result = {
+                "input_data": data,
+                "prediction": prediction_label
+            }
+
+            with open(result_path, 'w') as f:
+                json.dump(prediction_result, f, indent=4)
+
+            logging.info(f"Prediction results saved to {result_path}")
 
             return prediction_label
         except Exception as e:

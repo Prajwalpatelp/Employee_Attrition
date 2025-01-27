@@ -1,2 +1,0 @@
-Original dataset had 23436 rows.
-Cleaned dataset has 23199 rows.
