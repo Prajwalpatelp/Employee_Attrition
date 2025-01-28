@@ -53,7 +53,7 @@ This dataset contains employee survey data from IBM, including information on wh
 - YearsSinceLastPromotion
 - YearsWithCurrManager
 
-👉 link  [ 🔗IBM_Dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
+👉 [🔗 IBM Attrition Dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
 
 ## 🛑 Data Preprocessing
 
@@ -69,7 +69,8 @@ This dataset contains employee survey data from IBM, including information on wh
    - Applied Label Encoding and One-Hot Encoding to convert categorical variables into numerical representations.
 
 4. **Model Evaluation**  
-   - Used ROC and AUC metrics to evaluate the model’s performance.
+   - Used ROC and AUC metrics to evaluate the model’s performance.  
+   - Utilized precision, recall, accuracy, classification report, and confusion matrix for detailed evaluation.
 
 ## 🛑 Libraries Used
 
@@ -121,20 +122,19 @@ The XGBoost Classifier exhibits exceptional performance with near-perfect metric
 Below are key evaluation metrics visualized for a better understanding of the model's performance:
 
 - **Confusion Matrix**:  
-  ![Confusion Matrix](D:\Employee_Attrition\Employee_Attrition\confusion_matrix.png)
+  ![Confusion Matrix](images/confusion_matrix.png)
 
 - **ROC Curve**:  
-  ![ROC Curve](D:\Employee_Attrition\Employee_Attrition\roc_curve.png)
+  ![ROC Curve](images/roc_curve.png)
 
 ## 🛑 Installation Instructions
 
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/Prajwalpatelp/Employee_Attrition.git
-```
+   ```
 
-👉 To install required libraries:
-
-```bash
-  pip install -r requirements.txt
-```
+2. **Install Required Libraries**:
+   ```bash
+   pip install -r requirements.txt
+   
