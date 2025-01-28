@@ -53,7 +53,7 @@ This dataset contains employee survey data from IBM, including information on wh
 - YearsSinceLastPromotion
 - YearsWithCurrManager
 
-👉 [Link to the dataset: IBM Attrition Dataset](#)
+👉 link  [ 🔗IBM_Dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
 
 ## 🛑 Data Preprocessing
 
@@ -120,11 +120,21 @@ The XGBoost Classifier exhibits exceptional performance with near-perfect metric
 ### Performance Visuals:
 Below are key evaluation metrics visualized for a better understanding of the model's performance:
 
-- **Confusion Matrix**: ![Confusion Matrix](#)
-- **ROC Curve**: ![ROC Curve](#)
+- **Confusion Matrix**:  
+  ![Confusion Matrix](YOUR_IMAGE_PATH/confusion_matrix.png)
+
+- **ROC Curve**:  
+  ![ROC Curve](YOUR_IMAGE_PATH/roc_curve.png)
 
 ## 🛑 Installation Instructions
 
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/Prajwalpatelp/Employee_Attrition.git
+```
+
+👉 To install required libraries:
+
+```bash
+  pip install -r requirements.txt
+```
