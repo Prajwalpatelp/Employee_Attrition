@@ -121,10 +121,10 @@ The XGBoost Classifier exhibits exceptional performance with near-perfect metric
 Below are key evaluation metrics visualized for a better understanding of the model's performance:
 
 - **Confusion Matrix**:  
-  ![Confusion Matrix](YOUR_IMAGE_PATH/confusion_matrix.png)
+  ![Confusion Matrix](D:\Employee_Attrition\Employee_Attrition\confusion_matrix.png)
 
 - **ROC Curve**:  
-  ![ROC Curve](YOUR_IMAGE_PATH/roc_curve.png)
+  ![ROC Curve](D:\Employee_Attrition\Employee_Attrition\roc_curve.png)
 
 ## 🛑 Installation Instructions
 
