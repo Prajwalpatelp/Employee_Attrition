@@ -3,7 +3,23 @@
 <img src="image.jpeg" width="1000" />
 
 
-Employee attrition is a major concern for organizations, affecting productivity and workforce stability. This project leverages **Data Science & Analytics** to analyze IBM datasets, uncover attrition patterns, and predict potential employee turnover. By implementing **data mining techniques**, this study aims to help businesses take proactive measures to retain valuable employees.
+📌 Abstract
+
+Employee retention is a critical challenge for organizations, as losing skilled employees can result in substantial financial and operational setbacks. Traditionally, Human Resources (HR) departments have relied on manual approaches—such as employee interviews and feedback analysis—to identify factors leading to attrition. However, these methods are often time-consuming, subjective, and inefficient.
+
+With advancements in Data Science and predictive analytics, organizations can now leverage machine learning models to automate attrition prediction, enabling proactive decision-making. By analyzing various employee attributes, businesses can gain actionable insights to minimize turnover, reduce recruitment costs, and enhance workforce stability.
+
+🎯 Problem Statement
+
+The objective of this project is to develop a machine learning model that predicts employee attrition at IBM. The dataset consists of employee-specific details, including demographics, job roles, salary structures, and attrition status.
+
+By utilizing classification models, we aim to:
+
+Accurately predict whether an employee is likely to leave the company.
+
+Identify key factors contributing to employee attrition.
+
+Provide HR departments with data-driven strategies to improve employee retention.
 
 ---
 
@@ -27,7 +43,7 @@ This dataset, sourced from **IBM**, contains approximately **24,000 employee rec
 ## 🔍 Data Preprocessing & Analysis
 
 ### 📌 Exploratory Data Analysis (EDA)
-- **Data Visualization:** Used catplots, pie charts, and bar plots to analyze feature distributions.
+- **Data Visualization:** Used catplots, pie charts,Plotly,box plots and bar plots to analyze feature distributions.
 - **Insights Extraction:** Identified key attrition drivers based on job roles, salary, and experience.
 
 ### 🛠️ Data Cleaning & Feature Engineering
@@ -77,9 +93,9 @@ This dataset, sourced from **IBM**, contains approximately **24,000 employee rec
 This project demonstrates an **end-to-end machine learning pipeline** using **DVC (Data Version Control), MLflow, DagsHub, and FastAPI**. The workflow follows a structured approach for:  
 👉 **Data ingestion & validation**  
 👉 **Model training & evaluation**  
-👉 **Experiment tracking with MLflow & DagsHub**  
+👉 **Experiment tracking with MLflow in DagsHub**  
 👉 **Deployment with FastAPI & Docker**  
-👉 **Continuous monitoring & version control using DVC**  
+👉 **version control using DVC**  
 
 ---
 
@@ -108,17 +124,23 @@ graph TD
 # Clone the repository
 git clone https://github.com/Prajwalpatelp/Employee_Attrition.git
 
+# Creating Virtual Environment
+python -m venv venv
+
+# Activating the Virtual Environment (Windows Command Prompt)
+venv\Scripts\activate
+
 # Install dependencies
 pip install -r requirements.txt
-
-# Run DVC pipeline
-dvc repro
 
 # Run Training Pipeline
 python src/employee/pipeline/Training_pipeline.py
 
 # Run Prediction Pipeline
 python src/employee/pipeline/Prediction_pipeline.py
+
+# Run DVC pipeline
+dvc repro
 
 # Run FastAPI app
 uvicorn app:app --host 0.0.0.0 --port 8000
@@ -128,6 +150,13 @@ docker build -t employee-attrition:latest .
 
 # Run Docker Container
 docker run -p 8000:8000 employee-attrition:latest
+
+## Pull the Docker Image
+
+To pull the latest Docker image, use the following command:
+```sh
+docker pull prajwalpatel/fastapi-employee_attrition:latest
+
 ```
 
 ---
