@@ -1,6 +1,7 @@
 # 👨‍💼 Application of Data Science to Reduce Employee Attrition 👨‍💼
 
-![Employee Attrition](image.jpeg,width=1000)
+<img src="image.jpeg" width="1000" />
+
 
 Employee attrition is a major concern for organizations, affecting productivity and workforce stability. This project leverages **Data Science & Analytics** to analyze IBM datasets, uncover attrition patterns, and predict potential employee turnover. By implementing **data mining techniques**, this study aims to help businesses take proactive measures to retain valuable employees.
 
