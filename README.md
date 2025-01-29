@@ -11,7 +11,7 @@ Employee attrition is a major concern for organizations, affecting productivity 
 This dataset, sourced from **IBM**, contains approximately **24,000 employee records** with attributes related to job satisfaction, salary, work-life balance, and more. The objective is to **identify attrition trends** and enhance business decision-making.
 
 ### 🔹 Target Feature:
-- **Attrition** (Yes/No)
+- **Attrition** 
 
 ### 🔹 Categorical Features:
 - Business Travel, Department, EducationField, Gender, JobRole, MaritalStatus, Over18, OverTime, Employee Source
@@ -114,10 +114,10 @@ pip install -r requirements.txt
 dvc repro
 
 # Run Training Pipeline
-python src/pipeline/training_pipeline.py
+python src/employee/pipeline/Training_pipeline.py
 
 # Run Prediction Pipeline
-python src/pipeline/prediction_pipeline.py
+python src/employee/pipeline/Prediction_pipeline.py
 
 # Run FastAPI app
 uvicorn app:app --host 0.0.0.0 --port 8000
